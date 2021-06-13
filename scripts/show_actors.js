@@ -18,6 +18,20 @@ function getActorImgHTML(act) {
     return "<p><img src='" + act.sheet.object.data.img + "'  /></p><p>&nbsp;</p>";
 }
 
+function getActorHTML(act){
+    var s = getActorImgHTML(act).concat(getActorBioHTML(act));
+    s = s.replace(/\\n/g, "\\n")  
+               .replace(/\\'/g, "\\'")
+               .replace(/\\"/g, '\\"')
+               .replace(/\\&/g, "\\&")
+               .replace(/\\r/g, "\\r")
+               .replace(/\\t/g, "\\t")
+               .replace(/\\b/g, "\\b")
+               .replace(/\\f/g, "\\f");
+    s = s.replace(/[\u0000-\u0019]+/g,"");  
+    return s;
+}
+
 function getModuleFolderID() {
     var folders = game.folders._source;
     for (var i = 0; i < folders.length; i++) {
@@ -85,7 +99,7 @@ function displayActorSheetToPlayers(actor) {
         var folder_id;
         createModuleFolderIfNotExist().then((id) => {
             folder_id = id;
-            var journalEntryData = '{"_id":null, "name":"' + actor.name + '", "content":"' + getActorImgHTML(actor).concat(getActorBioHTML(actor)) + '", "folder":"' + folder_id + '"}';
+            var journalEntryData = '{"_id":null, "name":"' + actor.name + '", "content":"' + getActorHTML(actor) + '", "folder":"' + folder_id + '"}';
 
             JournalEntry.create(JSON.parse(journalEntryData)).then(() => {
                 var j = game.journal.getName(actor.name);

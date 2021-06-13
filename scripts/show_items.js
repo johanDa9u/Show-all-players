@@ -18,6 +18,20 @@ function getItemImgHTML(it){
     return "<p><img src='" + it.data.img + "' /></p><p>&nbsp;</p>";
 }
 
+function getItemHTML(it){
+    var s = getItemImgHTML(it).concat(getItemDescriptionHTML(it));
+    s = s.replace(/\\n/g, "\\n")  
+               .replace(/\\'/g, "\\'")
+               .replace(/\\"/g, '\\"')
+               .replace(/\\&/g, "\\&")
+               .replace(/\\r/g, "\\r")
+               .replace(/\\t/g, "\\t")
+               .replace(/\\b/g, "\\b")
+               .replace(/\\f/g, "\\f");
+    s = s.replace(/[\u0000-\u0019]+/g,"");  
+    return s;
+}
+
 function getModuleFolderID() {
     var folders = game.folders._source;
     for (var i = 0; i < folders.length; i++) {
@@ -86,7 +100,7 @@ function displayItemSheetToPlayers(item) {
         var folder_id;
         createModuleFolderIfNotExist().then((id) => {
             folder_id = id;
-            var journalEntryData = '{"_id":null, "name":"' + item.name + '", "content":"' + getItemImgHTML(item).concat(getItemDescriptionHTML(item)) + '", "folder":"' + folder_id + '"}';
+            var journalEntryData = '{"_id":null, "name":"' + item.name + '", "content":"' + getItemHTML(item) + '", "folder":"' + folder_id + '"}';
 
             JournalEntry.create(JSON.parse(journalEntryData)).then(() => {
                 var j = game.journal.getName(item.name);
