@@ -15,5 +15,7 @@
         "scripts/show_items.js",
         "scripts/show_actors.js"
     ],
-    "manifest": "https://raw.githubusercontent.com/johanDa9u/Show-all-players/main/module.json"
+    "manifest": "https://raw.githubusercontent.com/johanDa9u/Show-all-players/main/module.json",
+    "url": "https://github.com/johanDa9u/Show-all-players",
+    "download": "https://github.com/johanDa9u/Show-all-players/archive/refs/heads/main.zip"
 }
