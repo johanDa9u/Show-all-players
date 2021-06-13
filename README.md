@@ -10,10 +10,11 @@ You can also download the folder and place it in {userData}/Data/modules
 
 This module will get the currently opened actor sheet or item sheet, convert it to a Journal Entry and display it to your players.
 
- Markup : * For actor sheets: 
-                Once the actor sheet is opened, press ctrl + ArrowDown.
-          * For item sheets:
-                Once the item sheet is opened, press ctrl + ArrowUp.
+-For actor sheets: 
+    Once the actor sheet is opened, press ctrl + ArrowDown.
+    
+-For item sheets:
+    Once the item sheet is opened, press ctrl + ArrowUp.
 
 # Notes
 

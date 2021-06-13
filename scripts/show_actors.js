@@ -20,7 +20,7 @@ function getActorImgHTML(act) {
 
 function getActorHTML(act){
     var s = getActorImgHTML(act).concat(getActorBioHTML(act));
-    s = s.replace('"', '\"')        
+    s = s.replace('"', '\\"')        
                .replace(/\\n/g, "\\n")  
                .replace(/\\'/g, "\\'")
                .replace(/\\"/g, '\\"')
