@@ -109,4 +109,4 @@ function doc_keyUpItems(e) {
     }
 }
 
-document.addEventListener('keyup', doc_keyUp, false);
+document.addEventListener('keyup', doc_keyUpItems, false);

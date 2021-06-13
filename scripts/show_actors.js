@@ -108,4 +108,4 @@ function doc_keyDownActors(e) {
     }
 }
 
-document.addEventListener('keydown', doc_keyDown, false);
+document.addEventListener('keydown', doc_keyDownActors, false);
