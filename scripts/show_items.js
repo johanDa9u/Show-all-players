@@ -19,7 +19,10 @@ function getItemImgHTML(it){
 }
 
 function getItemHTML(it){
-    var s = getItemImgHTML(it).concat(getItemDescriptionHTML(it));
+    var s = getItemImgHTML(it);
+    if(getItemDescriptionHTML(it) !== null){
+        s = s.concat(getItemDescriptionHTML(it));
+    }
     s = s.replace(/\\n/g, "\\n")  
                .replace(/\\'/g, "\\'")
                .replace(/\\"/g, '\\"')
