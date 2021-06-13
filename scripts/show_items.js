@@ -15,7 +15,7 @@ function getItemDescriptionHTML(it) {
 }
 
 function getItemImgHTML(it){
-    return "<p><img src='" + it.data.img + "' height='100'/></p><p>&nbsp;</p>";
+    return "<p><img src='" + it.data.img + "' height='304'/></p><p>&nbsp;</p>";
 }
 
 function getItemHTML(it){
