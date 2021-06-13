@@ -20,8 +20,7 @@ function getItemImgHTML(it){
 
 function getItemHTML(it){
     var s = getItemImgHTML(it).concat(getItemDescriptionHTML(it));
-    s = s.replace('"', '\\"')    
-               .replace(/\\n/g, "\\n")  
+    s = s.replace(/\\n/g, "\\n")  
                .replace(/\\'/g, "\\'")
                .replace(/\\"/g, '\\"')
                .replace(/\\&/g, "\\&")
