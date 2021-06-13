@@ -15,7 +15,7 @@ function getActorBioHTML(act) {
 }
 
 function getActorImgHTML(act) {
-    return "<p><img src='" + act.sheet.object.data.img + "' width='160' height='160' /></p><p>&nbsp;</p>";
+    return "<p><img src='" + act.sheet.object.data.img + "' height='160' /></p><p>&nbsp;</p>";
 }
 
 function getActorHTML(act){
