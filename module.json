@@ -1,0 +1,18 @@
+{
+    "name": "Show-all-players",
+    "title": "Show all players - a module for dnd5",
+    "description": "A simple module that adds the 'show all players' feature to NPC sheets and items by converting them to Journal Entries",
+    "author": "Wawa",
+    "version": "1.0.0",
+    "minimumCoreVersion": "0.5.0",
+    "dependencies": [
+        {
+            "name": "dnd5e",
+            "type": "system"
+        }
+    ],
+    "scripts": [
+        "scripts/show_items.js",
+        "scripts/show_actors.js"
+    ]
+}
