@@ -25,8 +25,6 @@ Only you can see the folder and its content. You may delete the folder whenever 
 
 ### Known issues
 
-* The module might fail if there are double quotes (") in the bio or description of the sheet. You may however use single quotes instead.
-
 * When you update a sheet, be sure to delete the corresponding journal entry before you use the module to show it to players. Otherwise, the module will show the previous version of the sheet instead.
 
 
