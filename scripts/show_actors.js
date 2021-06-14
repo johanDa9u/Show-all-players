@@ -11,10 +11,7 @@ function getActorByName(name) {
 }
 
 function getActorBioHTML(act) {
-    if(act.type === "character"){
-        return act.data.data.details.biography.value;
-    }
-    return act.sheet.getData().actor.data.details.biography.value;
+    return act.data.data.details.biography.value.replace(/\\"/g, '\\"');
 }
 
 function getActorImgHTML(act) {
