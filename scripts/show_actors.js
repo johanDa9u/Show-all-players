@@ -11,7 +11,7 @@ function getActorByName(name) {
 }
 
 function getActorBioHTML(act) {
-    return act.data.data.details.biography.value.replace(/\\"/g, "\\'\\'");
+    return act.data.data.details.biography.value.replace(/\"/g, '\\"')
 }
 
 function getActorImgHTML(act) {
