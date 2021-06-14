@@ -11,7 +11,7 @@ function getItemByName(name) {
 }
 
 function getItemDescriptionHTML(it) {
-    return it.data.data.description.value;
+    return it.data.data.description.value.replace(/\"/g, '\\"');
 }
 
 function getItemImgHTML(it){
