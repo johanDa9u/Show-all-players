@@ -20,8 +20,6 @@ This module will get the currently opened actor sheet or item sheet, convert it 
 
 * This module can only show one sheet at a time so be sure to only have the desired sheet open by closing (or just minimizing) the other active sheets.
 
-* Regarding actor sheets, this module works on **NPC sheets only**, it will not work on player sheets.
-
 * All created journal entries will be stored in the "Actors and Items" folder in the Journal Entries tab.
 Only you can see the folder and its content. You may delete the folder whenever you want.
 

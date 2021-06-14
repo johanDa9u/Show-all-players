@@ -11,6 +11,9 @@ function getActorByName(name) {
 }
 
 function getActorBioHTML(act) {
+    if(act.type === "character"){
+        return actor.data.data.details.biography.value;
+    }
     return act.sheet.getData().actor.data.details.biography.value;
 }
 
